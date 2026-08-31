@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ============================================================
+   Estilos base globales. Todo lo demás vive en los componentes
+   como clases de Tailwind — este archivo se mantiene mínimo
+   a propósito.
+   ============================================================ */
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Evita la selección de texto e indicador tipo "I" (caret/cursor de texto) en toda la página */
+html,
+body,
+*,
+*::before,
+*::after {
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+/* Evita que el navbar fijo cubra el título al navegar por anclas. */
+section[id] {
+  scroll-margin-top: 5.5rem;
+}
+
+body {
+  @apply bg-white text-primary font-sans antialiased;
+}
+
+/* Usa la flecha normal sobre el texto en vez del cursor de texto
+   tipo "I". Los elementos interactivos (links, botones) mantienen
+   su cursor de mano gracias a su comportamiento por defecto y a
+   clases como cursor-pointer. */
+body,
+p,
+span,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+li,
+blockquote {
+  cursor: default;
+}
+
+/* Respeta a quienes prefieren menos movimiento (accesibilidad) */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* Utilidad reutilizable: contenedor centrado con el ancho máximo
+   del design system (1280px) */
+.container-page {
+  @apply mx-auto max-w-container px-5 sm:px-8 lg:px-12;
+}
