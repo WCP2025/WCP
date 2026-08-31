@@ -17,7 +17,7 @@ export const site = {
   ],
   whatsappMessage: 'Hola, quiero más información',
 
-  email: 'Workcleaningpressure25@gmail.com',
+  email: 'Info@workcleaningpressure.com',
 
   social: {
     instagram: 'https://www.instagram.com/workcleaningpressure_?utm_source=qr',
